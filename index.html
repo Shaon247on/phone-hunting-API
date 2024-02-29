@@ -16,25 +16,23 @@
     </header>
 
     <main class="container mx-auto mt-8">
-
         <!-- search option -->
         <section class="bg-gray-200 mb-6">
             <input type="text" placeholder="Search" class="input w-full max-w-xs m-3" id="search-field">
             <button class="btn btn-accent" onclick="handleSearch()">Search</button>
             <!-- Another Search Field -->
 
-            <input type="text" placeholder="Search" class="input input-bordered input-primary w-full max-w-xs"
+            <!-- <input type="text" placeholder="Search" class="input input-bordered input-primary w-full max-w-xs"
                 id="search2-field">
-            <button class="btn btn-active btn-primary" onclick="handleSearch2()">Search</button>
+            <button class="btn btn-active btn-primary" onclick="handleSearch2()">Search</button> -->
 
 
             <!-- search result  -->
         </section>
         <section>
-            <div class="text-center mt-40 hidden" id="loading-spnnier">
+            <!-- spinner -->
+            <div class="text-center m-40 hidden" id="loading-spnnier">
                 <span class="loading loading-bars loading-lg"></span>
-
-
             </div>
             <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-9">
                 <!-- demo phone card -->
@@ -50,11 +48,33 @@
                     </div>
                 </div> -->
             </div>
-            <div id="show-all-container" class="hidden">
-                <button class="btn btn-active btn-accent">Show all</button>
+            <div id="show-all-container" class="hidden text-center m-7">
+                <button class="btn btn-active btn-accent w-32 text-lg text-white" onclick="handleShowAll()">Show
+                    all</button>
 
             </div>
         </section>
+        
+        <!-- show details model -->
+        <section>
+            <div>
+                <!-- Open the modal using ID.showModal() method -->
+                <dialog id="showDetailsModel" class="modal modal-bottom sm:modal-middle scroll-none">
+                    <div class="modal-box">
+                        <h3 id="phone-name" class="font-bold text-lg">Hello!</h3>
+                        <img src="" class="w-12 " alt="">
+                        <div id="show-details-container" class="my-9 space-y-4"></div>
+                        <div class="modal-action">
+                            <form method="dialog">
+                                <!-- if there is a button in form, it will close the modal -->
+                                <button class="btn bg-red-600">Close</button>
+                            </form>
+                        </div>
+                    </div>
+                </dialog>
+            </div>
+        </section>
+
     </main>
 
     <footer>
